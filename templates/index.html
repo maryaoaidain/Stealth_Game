@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Stealth Escape</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>🧠 AI Stealth Escape Game</h1>
+
+    <div class="game-area">
+        <canvas id="gameCanvas" width="600" height="600"></canvas>
+<div id="overlay" class="overlay hidden">
+    <h1 id="resultText"></h1>
+    <button onclick="resetGame()">🔁 Play Again</button>
+</div>
+
+        <div class="panel">
+            <h2>🎮 Info</h2>
+            <p><b>Guard State:</b> <span id="state">PATROL</span></p>
+            <p><b>Algorithm:</b> A* Search</p>
+
+            <h3>Controls</h3>
+            <p>⬆ ⬇ ⬅ ➡ Move</p>
+
+            <button onclick="resetGame()">🔄 Restart</button>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
